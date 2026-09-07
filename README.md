@@ -89,7 +89,8 @@ The model was evaluated on a held-out test set of **1,035 emails**.
 
 ### Email Analysis
 
-![Trustify Interface](trustify-interface.png)
+![
+Trustify Interface](images/trustify-interface.png)
 
 ### Spam Detection
 
@@ -151,4 +152,4 @@ I enjoy building practical ML projects that move beyond notebooks into **usable,
 
 ### ⭐ Explore Trustify
 
-**[🚀 Live Demo](https://trustify-zimqjvqg5yrmclkhecarxv.streamlit.app/)**   |   **[💻 GitHub Repository](YOUR_GITHUB_LINK)**
+**[🚀 Live Demo](https://trustify-zimqjvqg5yrmclkhecarxv.streamlit.app/)**   

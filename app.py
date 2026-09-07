@@ -8,7 +8,7 @@ from nltk.stem import PorterStemmer
 
 # Page configuration
 st.set_page_config(
-    page_title="TrustAI - Spam Detector",
+    page_title="Trustify",
     page_icon="🛡️",
     layout="wide"
 )
@@ -87,10 +87,8 @@ def preprocess_text(text):
     return " ".join(text)
 
 
-# ---------------- SIDEBAR ----------------
-
 with st.sidebar:
-    st.title("🛡️ TrustAI")
+    st.title("🛡️ Trustify")
 
     st.markdown("### About the Model")
 
@@ -119,9 +117,8 @@ with st.sidebar:
     st.metric("Spam Recall", "99.05%")
 
 
-# ---------------- MAIN PAGE ----------------
 
-st.title("🛡️ TrustAI")
+st.title("🛡️ Trustify")
 
 st.subheader(
     "AI-powered spam detection using NLP & Machine Learning"
@@ -191,11 +188,9 @@ if st.button("🔍 Analyze Email", use_container_width=True):
             )
 
 
-# ---------------- HOW IT WORKS ----------------
-
 st.markdown("---")
 
-st.markdown("### ⚙️ How TrustAI Works")
+st.markdown("### ⚙️ How Trustify Works")
 
 col1, col2, col3 = st.columns(3)
 
@@ -215,5 +210,5 @@ with col3:
 st.markdown("---")
 
 st.caption(
-    "TrustAI • Built with Python, NLP, TF-IDF & Random Forest"
+    "Trustify • Built with Python, NLP, TF-IDF & Random Forest"
 )

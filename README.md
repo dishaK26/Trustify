@@ -5,7 +5,7 @@
 **Trustify** is an end-to-end NLP and Machine Learning application that analyzes email content and classifies it as **Spam or Ham** using TF-IDF and Random Forest.
 
 <p align="center">
-  <a href="YOUR_DEPLOYMENT_LINK">🚀 Live Demo</a>
+  <a href="https://trustify-zimqjvqg5yrmclkhecarxv.streamlit.app/">🚀 Live Demo</a>
   &nbsp;&nbsp;•&nbsp;&nbsp;
   <a href="YOUR_GITHUB_LINK">💻 Repository</a>
 </p>
@@ -151,4 +151,4 @@ I enjoy building practical ML projects that move beyond notebooks into **usable,
 
 ### ⭐ Explore Trustify
 
-**[🚀 Live Demo](YOUR_DEPLOYMENT_LINK)**   |   **[💻 GitHub Repository](YOUR_GITHUB_LINK)**
+**[🚀 Live Demo](https://trustify-zimqjvqg5yrmclkhecarxv.streamlit.app/)**   |   **[💻 GitHub Repository](YOUR_GITHUB_LINK)**

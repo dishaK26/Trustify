@@ -7,7 +7,6 @@
 <p align="center">
   <a href="https://trustify-zimqjvqg5yrmclkhecarxv.streamlit.app/">🚀 Live Demo</a>
   &nbsp;&nbsp;•&nbsp;&nbsp;
-  <a href="YOUR_GITHUB_LINK">💻 Repository</a>
 </p>
 
 ---
@@ -102,7 +101,7 @@ Trustify Interface](images/trustify-interface.png)
 
 Trustify is deployed using **Streamlit Community Cloud**, so the application can be tested directly without setting up the project locally.
 
-### 👉 [Open Trustify Live](YOUR_DEPLOYMENT_LINK)
+### 👉 [Open Trustify Live](https://trustify-zimqjvqg5yrmclkhecarxv.streamlit.app/)
 
 ---
 

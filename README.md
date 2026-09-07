@@ -1,336 +1,154 @@
-🛡️ Trustify — AI Spam Detector Using NLP & Machine Learning
+# 🛡️ Trustify
 
-An end-to-end NLP and Machine Learning application that detects whether an email is Spam or Ham in real time.
+### AI Spam Detector using NLP & Machine Learning
 
-￼ ￼ ￼ ￼
+**Trustify** is an end-to-end NLP and Machine Learning application that analyzes email content and classifies it as **Spam or Ham** using TF-IDF and Random Forest.
 
-🚀 Live Demo
+<p align="center">
+  <a href="YOUR_DEPLOYMENT_LINK">🚀 Live Demo</a>
+  &nbsp;&nbsp;•&nbsp;&nbsp;
+  <a href="YOUR_GITHUB_LINK">💻 Repository</a>
+</p>
 
-👉 https://trustify-zimqjvqg5yrmclkhecarxv.streamlit.app/
+---
 
-No installation required.
-Paste any email into the application and Trustify will analyze it and predict whether it is Spam or Ham.
+## ✨ Features
 
-📂 GitHub Repository
+* 📩 **Real-time Email Analysis**
+* 🧠 **NLP-based Text Processing**
+* 🔢 **TF-IDF Feature Extraction**
+* 🌲 **Random Forest Classification**
+* 📊 **Spam Probability**
+* 🌐 **Streamlit Web Application**
+* ☁️ **Cloud Deployment**
 
-View Source Code & Project Files →
+---
 
-🎯 What is Trustify?
+## 🏗️ Architecture
 
-Spam emails are not always obvious. Promotional messages, fraudulent offers, phishing attempts, and suspicious communications can look very similar to legitimate emails.
-Trustify uses Natural Language Processing (NLP) and Machine Learning to automatically classify email text into two categories:
-PredictionMeaning🟢 Ham (0)Legitimate email🔴 Spam (1)Spam email 
-The project goes beyond model training by turning the final model into a real-time web application using Streamlit and deploying it for public access.
+```text
+┌──────────────────────────────┐
+│         📩 Email Input       │
+└──────────────┬───────────────┘
+               ↓
+┌──────────────────────────────┐
+│      NLP Preprocessing       │
+│ Lowercase • Stopwords        │
+│ Punctuation • Stemming       │
+└──────────────┬───────────────┘
+               ↓
+┌──────────────────────────────┐
+│       TF-IDF Vectorizer      │
+└──────────────┬───────────────┘
+               ↓
+┌──────────────────────────────┐
+│     🌲 Random Forest         │
+│        Classifier            │
+└──────────────┬───────────────┘
+               ↓
+        ┌──────┴──────┐
+        ↓             ↓
+    🟢 HAM        🔴 SPAM
+```
 
-💡 Why I Built This
+---
 
-The objective was to take a real-world text classification problem through the complete machine learning lifecycle:
-Raw Email → NLP Processing → Feature Engineering → Model Training → Model Evaluation → Model Selection → Deployment
-This project helped me understand not just how to train a model, but also how to turn that model into a usable application.
+## 📊 Model Performance
 
-🔄 Project Workflow
+**Final Model:** TF-IDF + Random Forest
 
-📧 RAW EMAIL │ ▼ ┌─────────────────┐ │ Text Cleaning │ └─────────────────┘ │ ▼ Lowercasing + Punctuation Removal │ ▼ Stopword Removal │ ▼ Stemming │ ▼ Cleaned Email │ ▼ ┌─────────────────┐ │ TF-IDF │ │ Vectorization │ └─────────────────┘ │ ▼ Numerical Features │ ▼ ┌────────────────────┐ │ Random Forest │ │ Classifier │ └────────────────────┘ │ ┌───────┴───────┐ ▼ ▼ 🟢 HAM 🔴 SPAM 
+| Metric         |      Score |
+| -------------- | ---------: |
+| Accuracy       | **98.36%** |
+| Spam Precision | **98.65%** |
+| Spam Recall    | **99.05%** |
+| Spam F1-Score  | **98.85%** |
 
-🧹 Data Preprocessing
+The model was evaluated on a held-out test set of **1,035 emails**.
 
-Raw email text was processed using an NLP pipeline before being passed to the machine learning models.
+---
 
-Preprocessing Steps
+## 🛠️ Technology Stack
 
-Lowercasing
+| Category           | Technologies              |
+| ------------------ | ------------------------- |
+| Language           | Python                    |
+| Data Processing    | Pandas, NumPy             |
+| NLP                | NLTK                      |
+| Feature Extraction | TF-IDF                    |
+| Machine Learning   | Scikit-learn              |
+| Final Model        | Random Forest             |
+| Model Persistence  | Joblib                    |
+| Web Application    | Streamlit                 |
+| Deployment         | Streamlit Community Cloud |
+| Version Control    | GitHub                    |
 
-Standardizes text so words with different capitalization are treated consistently.
+---
 
-Punctuation Removal
+## 📸 Application
 
-Removes unnecessary punctuation from email text.
+### Email Analysis
 
-Stopword Removal
+![Trustify Interface](images/trustify-interface.png)
 
-Removes common words that generally provide limited discriminatory information.
+### Spam Detection
 
-Porter Stemming
+![Spam Prediction](images/trustify-spam.png)
 
-Reduces words to their stem/root form.
+---
 
-Example:
+## 🚀 Deployment
 
-playing → play played → play plays → play 
+Trustify is deployed using **Streamlit Community Cloud**, so the application can be tested directly without setting up the project locally.
 
-Corpus Creation 
+### 👉 [Open Trustify Live](YOUR_DEPLOYMENT_LINK)
 
-The cleaned text was reconstructed and stored as the final corpus.
+---
 
-🔢 Feature Engineering — TF-IDF
+## 📁 Project Structure
 
-Machine learning algorithms require numerical input, so the cleaned email corpus was converted into numerical features using:
+```text
+Trustify/
+│
+├── app.py
+├── spam_email_detection.ipynb
+├── spam_ham_dataset.csv
+├── random_forest_model.pkl
+├── tfidf_vectorizer.pkl
+├── requirements.txt
+└── README.md
+```
 
-TF-IDF — Term Frequency–Inverse Document Frequency
+---
 
-TF-IDF represents the importance of words within documents while reducing the influence of words that appear frequently across the entire dataset.
-The final vectorization generated approximately:
-42,637 text features.
-The trained vectorizer was saved separately so that new emails entered through the Streamlit application can be transformed using the same feature representation used during model training.
+## 📚 Documentation
 
-🤖 Machine Learning Models
+For the complete project documentation, including:
 
-Four classification algorithms were evaluated:
+* Dataset analysis
+* NLP preprocessing
+* Model experiments
+* Model comparison
+* Evaluation
+* Technical decisions
+* Deployment process
+* Limitations
+* Future improvements
 
-1. Logistic Regression
+→ **See [PROJECT_DOCUMENTATION.md](PROJECT_DOCUMENTATION.md)**
 
-A strong baseline for high-dimensional text classification.
+---
 
-2. Random Forest
+## 👩‍💻 Author
 
-An ensemble learning algorithm that combines multiple decision trees to produce robust predictions.
+### Disha
 
-3. Decision Tree
+Computer Science Engineering Student focused on **Data Science, Machine Learning & AI**.
 
-A tree-based classification algorithm that learns decision rules from the feature space.
+I enjoy building practical ML projects that move beyond notebooks into **usable, deployed applications**.
 
-4. Naive Bayes
+---
 
-A probabilistic algorithm commonly used for text classification.
+### ⭐ Explore Trustify
 
-📊 Model Performance
-
-The models were evaluated using:
-
-Precision
-
-Recall
-
-F1-score
-
-Accuracy
-
-Classification Report
-
-Confusion Matrix
-
-TF-IDF Model Comparison
-
-ModelSpam PrecisionSpam RecallSpam F1AccuracyLogistic Regression0.960.990.970.98Random Forest0.980.980.980.98Decision Tree0.920.910.920.95Naive Bayes0.950.970.960.98 
-
-🏆 Why Random Forest?
-
-Although Logistic Regression and Random Forest achieved similar overall accuracy, Random Forest provided a strong balance between precision, recall and F1-score for the Spam class.
-The final model produced:
-MetricResultAccuracy98.36%Spam Precision98.65%Spam Recall99.05%Spam F1-score98.85% 
-
-Confusion Matrix
-
-Predicted HamPredicted SpamActual Ham28610Actual Spam7732 
-This resulted in:
-
-True Negative: 286
-
-False Positive: 10
-
-False Negative: 7
-
-True Positive: 732
-
-The model was therefore not treated as a 100% accurate system. Real-world email classification can still produce false positives and false negatives.
-
-💾 Model Persistence
-
-After selecting Random Forest, the trained model and TF-IDF vectorizer were serialized using Joblib.
-random_forest_model.pkl tfidf_vectorizer.pkl 
-This allows the deployed application to load the already-trained objects instead of retraining the model every time the application starts.
-
-Prediction Pipeline
-
-New Email ↓ Preprocessing ↓ TF-IDF Vectorizer ↓ Random Forest Model ↓ Spam / Ham Prediction 
-
-🌐 Streamlit Application
-
-Trustify was converted into an interactive web application using Streamlit.
-The user simply:
-1. Opens Trustify ↓ 2. Pastes an email ↓ 3. Clicks Analyze Email ↓ 4. NLP preprocessing ↓ 5. TF-IDF transformation ↓ 6. Random Forest prediction ↓ 7. Spam / Ham result 
-The application is publicly deployed, allowing users and recruiters to test the model without setting up the project locally.
-
-🖥️ Application Preview
-
-📸 Add your Streamlit application screenshot here
-
-![Trustify Application](images/trustify-app.png) 
-A screenshot of the live application can be added to the repository under:
-images/ └── trustify-app.png 
-
-🛠️ Tech Stack
-
-Programming
-
-Python
-
-Data Processing
-
-Pandas
-
-NumPy
-
-NLP
-
-NLTK
-
-Porter Stemmer
-
-Stopword Removal
-
-Machine Learning
-
-Scikit-learn
-
-Logistic Regression
-
-Random Forest
-
-Decision Tree
-
-Naive Bayes
-
-Feature Engineering
-
-TF-IDF
-
-Model Persistence
-
-Joblib
-
-Application & Deployment
-
-Streamlit
-
-Streamlit Community Cloud
-
-Development
-
-Jupyter Notebook
-
-GitHub
-
-📁 Project Structure
-
-Trustify/ │ ├── app.py ├── spam_email_detection.ipynb ├── random_forest_model.pkl ├── tfidf_vectorizer.pkl ├── requirements.txt ├── README.md └── spam_ham_dataset.csv 
-
-File Description
-
-FilePurposeapp.pyStreamlit applicationspam_email_detection.ipynbComplete ML/NLP workflowrandom_forest_model.pklTrained Random Forest modeltfidf_vectorizer.pklTrained TF-IDF vectorizerrequirements.txtRequired Python dependenciesspam_ham_dataset.csvDataset used for trainingREADME.mdProject documentation 
-
-⚙️ Run Locally
-
-If you want to run Trustify locally:
-
-1. Clone the repository
-
-git clone YOUR_GITHUB_REPOSITORY_LINK_HERE cd Trustify 
-
-2. Install dependencies
-
-pip install -r requirements.txt 
-
-3. Run the Streamlit application
-
-streamlit run app.py 
-The application will open in your browser.
-
-Recruiters: You can skip the local setup and directly test the deployed application using the Live Demo link at the top of this README.
-
-⚠️ Limitations
-
-Trustify is a machine learning prototype and has several limitations:
-
-Performance depends on the training dataset.
-
-Some legitimate emails may be classified as Spam.
-
-Some Spam emails may be classified as Ham.
-
-The current model primarily analyzes email text.
-
-It does not independently inspect sender reputation, email headers, attachments, or URL safety.
-
-Real-world emails can also differ from the dataset used for training, which can cause distribution shift and affect predictions.
-
-🔮 Future Improvements
-
-Potential improvements include:
-
-🔗 URL and hyperlink analysis
-
-📩 Email-header analysis
-
-🌐 Sender/domain reputation features
-
-📎 Attachment-risk analysis
-
-⚙️ Hyperparameter tuning
-
-🔄 Cross-validation
-
-🧠 Explainable AI for prediction reasoning
-
-📚 Larger and more diverse email datasets
-
-🔁 Continuous model retraining
-
-🔐 Combining NLP with cybersecurity signals
-
-A future version could combine:
-Email Text + Sender Information + URLs + Headers + Attachments
-to create a more comprehensive email threat-detection system.
-
-📚 Key Concepts Demonstrated
-
-This project demonstrates practical implementation of:
-
-Exploratory Data Analysis
-
-Data Cleaning
-
-Natural Language Processing
-
-Text Preprocessing
-
-Stopword Removal
-
-Stemming
-
-TF-IDF
-
-Train-Test Split
-
-Classification
-
-Ensemble Learning
-
-Model Comparison
-
-Precision
-
-Recall
-
-F1-score
-
-Confusion Matrix
-
-Model Persistence
-
-Streamlit
-
-GitHub
-
-Cloud Deployment
-
-👩‍💻 Author
-
-Disha
-Built as an end-to-end Machine Learning + NLP portfolio project.
-
-⭐ If you found this project interesting
-
-Feel free to explore the repository and try the live Trustify application.
-
-🚀 TRY TRUSTIFY LIVE →
+**[🚀 Live Demo](YOUR_DEPLOYMENT_LINK)**   |   **[💻 GitHub Repository](YOUR_GITHUB_LINK)**

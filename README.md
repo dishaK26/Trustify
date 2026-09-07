@@ -2,7 +2,7 @@
 
 ### AI Spam Detector using NLP & Machine Learning
 
-**Trustify** is an end-to-end NLP and Machine Learning application that analyzes email content and classifies it as **Spam or Ham** using TF-IDF and Random Forest.
+**Trustify** is an end to end NLP and Machine Learning application that analyzes email content and classifies it as **Spam or Ham** using TF-IDF and Random Forest.
 
 <p align="center">
   <a href="https://trustify-zimqjvqg5yrmclkhecarxv.streamlit.app/">🚀 Live Demo</a>

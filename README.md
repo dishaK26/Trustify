@@ -89,11 +89,11 @@ The model was evaluated on a held-out test set of **1,035 emails**.
 
 ### Email Analysis
 
-![Trustify Interface]()
+![Trustify Interface](trustify-interface.png)
 
 ### Spam Detection
 
-![Spam Prediction](images/trustify-spam.png)
+![Spam Prediction](images/trustify-email-legit.png)
 
 ---
 

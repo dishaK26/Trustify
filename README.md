@@ -137,18 +137,11 @@ For the complete project documentation, including:
 
 → **See [PROJECT_DOCUMENTATION.md](PROJECT_DOCUMENTATION.md)**
 
----
-
-## 👩‍💻 Author
-
-### Disha
-
-Computer Science Engineering Student focused on **Data Science, Machine Learning & AI**.
-
-I enjoy building practical ML projects that move beyond notebooks into **usable, deployed applications**.
 
 ---
 
 ### ⭐ Explore Trustify
 
 **[🚀 Live Demo](https://trustify-zimqjvqg5yrmclkhecarxv.streamlit.app/)**   
+
+Made with dedication by **DISHA** ❤️

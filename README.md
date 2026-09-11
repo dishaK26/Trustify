@@ -135,7 +135,7 @@ For the complete project documentation, including:
 * Limitations
 * Future improvements
 
-→ **See [PROJECT_DOCUMENTATION.md](PROJECT_DOCUMENTATION.md)**
+→ **See [PROJECT_DOCUMENTATION.md](Trustify.docx)**
 
 
 ---
